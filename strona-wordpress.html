@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUN CZERSK 1926–2026 – Jubileuszowe biegi na 100-lecie Czerska</title>
+<style>
+/* =============================================
+   INSTRUKCJA WGRYWANIA GRAFIK NA WORDPRESS:
+   1. W panelu WP wejdź w Media → Dodaj nowe
+   2. Wgraj wszystkie pliki PNG z folderu "GRAFIKI BIEGI"
+   3. Skopiuj URL każdego pliku i zastąp ścieżki poniżej:
+      "images/logo_biegi-01.png"  →  URL z WordPress
+      "images/15.png" → URL z WordPress  itd.
+   =============================================
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --zielony:   #2e7d32;
+  --zielony-j: #43a047;
+  --zloty:     #c8a227;
+  --ciemny:    #1a1a1a;
+  --szary:     #f5f5f5;
+  --biel:      #ffffff;
+  --tekst:     #2c2c2c;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--tekst);
+  line-height: 1.7;
+  background: var(--biel);
+}
+
+/* ── HERO ─────────────────────────────────── */
+.hero {
+  background: linear-gradient(160deg, #0d2e0d 0%, #1b4a1b 50%, #0d2e0d 100%);
+  color: var(--biel);
+  text-align: center;
+  padding: 60px 20px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('images/20.png') center/cover no-repeat;
+  opacity: 0.18;
+}
+
+.hero-inner { position: relative; max-width: 860px; margin: 0 auto; }
+
+.hero-logo {
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.hero-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--zloty);
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  max-width: 680px;
+  margin: 0 auto 36px;
+  color: #d4e8d4;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: var(--zloty);
+  color: var(--ciemny);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 42px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background .2s, transform .2s;
+}
+
+.btn-cta:hover { background: #e0b730; transform: translateY(-2px); }
+
+/* ── SEKCJE ───────────────────────────────── */
+section { padding: 64px 20px; }
+
+.section-inner { max-width: 1080px; margin: 0 auto; }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--zielony);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: var(--ciemny);
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--zielony);
+}
+
+p { margin-bottom: 14px; }
+
+.bg-szary { background: var(--szary); }
+.bg-ciemny { background: var(--ciemny); color: var(--biel); }
+.bg-ciemny h2, .bg-ciemny h3 { color: var(--biel); }
+.bg-ciemny .section-label { color: var(--zloty); }
+.bg-zielony { background: var(--zielony); color: var(--biel); }
+.bg-zielony h2 { color: var(--biel); }
+.bg-zielony .section-label { color: var(--zloty); }
+
+/* ── KROKI ────────────────────────────────── */
+.kroki-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.krok {
+  background: var(--biel);
+  border-radius: 8px;
+  padding: 30px 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,.07);
+  border-top: 4px solid var(--zielony);
+}
+
+.krok-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--zielony);
+  color: var(--biel);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.krok p { margin: 0; font-size: 0.97rem; }
+
+/* ── O WYDARZENIU – obraz + tekst ────────── */
+.o-wydarzeniu-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.o-wydarzeniu-flex img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 4px 24px rgba(0,0,0,.18);
+}
+
+/* ── DWA BIEGI ────────────────────────────── */
+.biegi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.bieg-karta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,.13);
+  background: var(--biel);
+  display: flex;
+  flex-direction: column;
+}
+
+.bieg-karta img {
+  width: 100%;
+  aspect-ratio: 940/788;
+  object-fit: cover;
+  display: block;
+}
+
+.bieg-karta-body { padding: 28px 24px; flex: 1; }
+
+.bieg-badge {
+  display: inline-block;
+  background: var(--zielony-j);
+  color: var(--biel);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.bieg-karta h3 { color: var(--ciemny); font-size: 1.2rem; }
+.bieg-karta .bieg-meta { color: #666; font-size: 0.9rem; margin-bottom: 14px; }
+.bieg-karta p { font-size: 0.95rem; }
+
+.btn-bieg {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--zielony);
+  color: var(--biel);
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background .2s;
+}
+
+.btn-bieg:hover { background: var(--zielony-j); }
+
+/* ── TABELE SZCZEGÓŁÓW ────────────────────── */
+.tabele-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.tabela-wrap h3 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: var(--biel);
+  border-bottom: 2px solid var(--zloty);
+  padding-bottom: 8px;
+}
+
+table.szczegoly {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+table.szczegoly td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  vertical-align: top;
+}
+
+table.szczegoly td:first-child {
+  font-weight: 600;
+  color: var(--zloty);
+  white-space: nowrap;
+  width: 38%;
+}
+
+/* ── HARMONOGRAM ──────────────────────────── */
+.harmonogram-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.harmonogram-col h3 {
+  color: var(--zielony);
+  border-bottom: 3px solid var(--zielony);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.czas-item {
+  display: flex;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 0.93rem;
+}
+
+.czas-item .godz {
+  font-weight: 700;
+  color: var(--zielony);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.czas-item.strzal { background: #e8f5e9; border-radius: 4px; padding: 8px 10px; margin: 4px -10px; }
+.czas-item.strzal .godz { color: var(--zielony); }
+.czas-item.strzal .opis { font-weight: 700; }
+
+/* ── TRASA ────────────────────────────────── */
+.trasa-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.trasa-karta {
+  background: rgba(255,255,255,.05);
+  border-radius: 8px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.trasa-karta h3 { color: var(--zloty); margin-bottom: 16px; }
+
+.trasa-row {
+  display: flex;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.trasa-row strong {
+  min-width: 140px;
+  flex-shrink: 0;
+  color: rgba(255,255,255,.7);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-top: 2px;
+}
+
+/* ── GALERIA ──────────────────────────────── */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 940/788;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.galeria-grid img:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+
+/* ── STOPKA ───────────────────────────────── */
+.stopka {
+  background: #0d1a0d;
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.88rem;
+}
+
+.stopka img { max-width: 180px; margin-bottom: 18px; opacity: .85; }
+.stopka a { color: var(--zloty); text-decoration: none; }
+
+/* ── RESPONSIVE ───────────────────────────── */
+@media (max-width: 768px) {
+  .o-wydarzeniu-flex,
+  .biegi-grid,
+  .tabele-grid,
+  .harmonogram-cols,
+  .trasa-cols {
+    grid-template-columns: 1fr;
+  }
+  .hero { padding: 40px 16px 50px; }
+  section { padding: 44px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- LOGO: po wgraniu na WP zastąp src odpowiednim URL -->
+    <img class="hero-logo" src="images/logo_biegi-01.png" alt="RUN CZERSK 1926–2026 – logo" />
+
+    <div class="hero-kicker">100-lecie Czerska · 2026</div>
+
+    <h1>To się dzieje tylko raz.<br>Biegnij przez 100 lat historii.</h1>
+
+    <p class="hero-sub">
+      Sto lat temu Czersk stał się miastem. Dziś jesteś częścią tej historii –
+      na trasie przez lasy Borów Tucholskich, przez prehistoryczne Kręgi Kamienne,
+      przez ulice swojego miasta. W 2026 roku świętujemy razem.
+      Wybierz swój dystans i dołącz do jubileuszu.
+    </p>
+
+    <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
+    <a href="#" class="btn-cta">Zapisz się i biegnij w jubileuszu</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     JAK SIĘ ZAPISAĆ
+═══════════════════════════════════════════ -->
+<section class="bg-szary">
+  <div class="section-inner">
+    <span class="section-label">Rejestracja</span>
+    <h2>Jak się zapisać? – 4 proste kroki</h2>
+
+    <div class="kroki-grid">
+      <div class="krok">
+        <div class="krok-num">1</div>
+        <p>Wejdź na stronę organizatora i wypełnij formularz rejestracyjny</p>
+      </div>
+      <div class="krok">
+        <div class="krok-num">2</div>
+        <p>Wybierz jeden lub oba biegi i opłać start <strong>(60 lub 80 zł)</strong></p>
+      </div>
+      <div class="krok">
+        <div class="krok-num">3</div>
+        <p>W dniu zawodów przyjdź do Biura Zawodów z dowodem tożsamości</p>
+      </div>
+      <div class="krok">
+        <div class="krok-num">4</div>
+        <p>Odbierz numer startowy, rozgrzej się i biegnij!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     O WYDARZENIU
+═══════════════════════════════════════════ -->
+<section>
+  <div class="section-inner">
+    <div class="o-wydarzeniu-flex">
+      <div>
+        <span class="section-label">O wydarzeniu</span>
+        <h2>RUN CZERSK 1926–2026</h2>
+        <p>
+          Jedno z największych wydarzeń sportowych w historii gminy Czersk –
+          organizowane z okazji <strong>stuletniej rocznicy nadania miastu praw miejskich</strong>.
+          Dwa biegi. Dwie trasy. Dwa jubileuszowe medale.
+          Jedno miasto, które w 2026 roku obchodzi swój wiek.
+        </p>
+        <p>
+          To nie jest zwykły bieg, który pojawia się co roku. To wydarzenie wyjątkowe –
+          zaplanowane specjalnie na ten jubileusz. Jeśli mieszkasz w Czersku, Ostrowitem,
+          Łągu, Odrach, Malachinie czy gdziekolwiek w gminie –
+          <strong>to jest Twoje święto. I Twój bieg.</strong>
+        </p>
+        <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
+        <a href="#" class="btn-bieg">Zarejestruj się</a>
+      </div>
+      <!-- Grafika główna wydarzenia -->
+      <img src="images/17.png" alt="RUN CZERSK – event" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     DWA BIEGI
+═══════════════════════════════════════════ -->
+<section class="bg-szary">
+  <div class="section-inner">
+    <span class="section-label">Program</span>
+    <h2>Dwa biegi – dwa oblicza Czerska</h2>
+    <p>
+      W ramach cyklu RUN CZERSK 1926–2026 odbędą się dwa osobne wydarzenia –
+      każde z własną trasą, atmosferą i charakterem. Możesz wybrać jeden lub oba –
+      a rejestrując się na oba starty, zyskujesz specjalną cenę i
+      <strong>medal 100-lecia w kompletnej formie</strong>
+      (dwie jego połowy razem tworzą wyjątkową pamiątkę).
+    </p>
+
+    <div class="biegi-grid">
+
+      <!-- BIEG 1: SZMARAGD BORÓW -->
+      <div class="bieg-karta">
+        <img src="images/15.png" alt="Szmaragd Borów – bieg 10 km" />
+        <div class="bieg-karta-body">
+          <span class="bieg-badge">Bieg nr 1 · Bieg również dla dzieci!</span>
+          <h3>Szmaragd Borów</h3>
+          <p class="bieg-meta">10 km &nbsp;|&nbsp; 20 czerwca 2026 (sobota)</p>
+          <p>
+            Letni bieg przez serce Borów Tucholskich.
+            Start i meta w <strong>Centrum Rekreacji w Ostrowitem</strong> nad jeziorem.
+          </p>
+          <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
+          <a href="#" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
+        </div>
+      </div>
+
+      <!-- BIEG 2: KRĘGI MOCY -->
+      <div class="bieg-karta">
+        <img src="images/16.png" alt="Kręgi Mocy – półmaraton 21 km" />
+        <div class="bieg-karta-body">
+          <span class="bieg-badge">Bieg nr 2 · Półmaraton jubileuszowy</span>
+          <h3>Kręgi Mocy</h3>
+          <p class="bieg-meta">Półmaraton 21 km &nbsp;|&nbsp; 5 września 2026 (sobota)</p>
+          <p>
+            Jubileuszowy półmaraton z prehistorycznych Kręgów Kamiennych do serca Czerska.
+            Meta na <strong>Placu Piekarka</strong>.
+          </p>
+          <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
+          <a href="#" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SZCZEGÓŁY OBU BIEGÓW
+═══════════════════════════════════════════ -->
+<section class="bg-ciemny">
+  <div class="section-inner">
+    <span class="section-label">Szczegóły</span>
+    <h2>Szczegóły obu biegów</h2>
+
+    <div class="tabele-grid">
+
+      <!-- TABELA SZMARAGD BORÓW -->
+      <div class="tabela-wrap">
+        <h3>Szmaragd Borów – 10 km</h3>
+        <table class="szczegoly">
+          <tbody>
+            <tr><td>Data</td><td>20 czerwca 2026 r. (sobota)</td></tr>
+            <tr><td>Start</td><td>godz. 11:00 | Centrum Rekreacji nad Jeziorem, Ostrowite</td></tr>
+            <tr><td>Meta</td><td>Ostrowite (trasa zapętlona – start = meta)</td></tr>
+            <tr><td>Trasa</td><td>Ostrowite – Konewki – Dąbki – Ustronie – Konewki – Ostrowite</td></tr>
+            <tr><td>Nawierzchnia</td><td>Asfalt 60%, płyty YOMB 15%, grunt leśny 25%</td></tr>
+            <tr><td>Profil trasy</td><td>Płaski, bez znaczących przewyższeń – idealna na wynik</td></tr>
+            <tr><td>Punkty z wodą</td><td>Na 4 km i 7 km</td></tr>
+            <tr><td>Limit czasowy</td><td>90 minut</td></tr>
+            <tr><td>Biuro Zawodów</td><td>Centrum Rekreacji w Ostrowitem | otwarte 9:00–10:45</td></tr>
+            <tr><td>Limit uczestników</td><td>300 osób (16+)</td></tr>
+            <tr><td>Biegi dziecięce</td><td>Tak – tego samego dnia, 6 kategorii (0–15 lat), bezpłatnie</td></tr>
+            <tr><td>Opłata startowa</td><td>60 zł (zapis na oba biegi) | 80 zł (pojedynczy start)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TABELA KRĘGI MOCY -->
+      <div class="tabela-wrap">
+        <h3>Kręgi Mocy – 21 km</h3>
+        <table class="szczegoly">
+          <tbody>
+            <tr><td>Data</td><td>5 września 2026 r. (sobota)</td></tr>
+            <tr><td>Start</td><td>godz. 13:00 | Rezerwat Kręgi Kamienne – Odry</td></tr>
+            <tr><td>Meta</td><td>Plac Piekarka, Czersk</td></tr>
+            <tr><td>Trasa</td><td>Odry → Gotelp → Przyjaźnia → Kamionka → Łubna → Malachin → Czersk</td></tr>
+            <tr><td>Nawierzchnia</td><td>Asfalt 75%, tłuczeń 10%, kostka betonowa 10%, płyty YOMB 5%</td></tr>
+            <tr><td>Profil trasy</td><td>Płaski z lokalnymi przewyższeniami (Odry, Gotelp, Łubna, Malachin, Czersk)</td></tr>
+            <tr><td>Punkty odżywcze</td><td>3 na trasie (ok. 5, 10, 15 km) + meta</td></tr>
+            <tr><td>Transport na start</td><td>Autobus z Pl. Piekarka → Odry | od godz. 11:00, ostatni o 12:15</td></tr>
+            <tr><td>Limit czasowy</td><td>180 minut (3 godziny)</td></tr>
+            <tr><td>Biuro Zawodów</td><td>Plac Piekarka w Czersku | otwarte 9:00–12:00</td></tr>
+            <tr><td>Limit uczestników</td><td>300 osób (16+)</td></tr>
+            <tr><td>Nagrody finansowe</td><td>I–1000 zł | II–700 zł | III–500 zł | IV–200 zł | V–100 zł (K i M)</td></tr>
+            <tr><td>Nagroda specjalna</td><td>Dla najlepszego/najlepszej mieszkańca/mieszkanki gminy Czersk</td></tr>
+            <tr><td>Opłata startowa</td><td>60 zł (zapis na oba biegi) | 80 zł (pojedynczy start)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     HARMONOGRAM
+═══════════════════════════════════════════ -->
+<section>
+  <div class="section-inner">
+    <span class="section-label">Plan dnia</span>
+    <h2>Harmonogram wydarzeń</h2>
+
+    <div class="harmonogram-cols">
+
+      <div class="harmonogram-col">
+        <h3>20 czerwca 2026 – Szmaragd Borów</h3>
+        <div class="czas-item">
+          <span class="godz">9:00</span>
+          <span class="opis">Otwarcie Biura Zawodów, Centrum Rekreacji w Ostrowitem</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">9:00–10:45</span>
+          <span class="opis">Odbiór numerów startowych, weryfikacja</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">Rano</span>
+          <span class="opis">Biegi dzieci i młodzieży (6 kategorii wiekowych)</span>
+        </div>
+        <div class="czas-item strzal">
+          <span class="godz">11:00</span>
+          <span class="opis">STRZAŁ STARTOWY | bieg główny 10 km</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">do 12:30</span>
+          <span class="opis">Finiszowanie uczestników (limit 90 min), dekoracje</span>
+        </div>
+      </div>
+
+      <div class="harmonogram-col">
+        <h3>5 września 2026 – Kręgi Mocy</h3>
+        <div class="czas-item">
+          <span class="godz">9:00</span>
+          <span class="opis">Otwarcie Biura Zawodów, Plac Piekarka w Czersku</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">9:00–12:00</span>
+          <span class="opis">Odbiór numerów startowych, weryfikacja</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">11:00–12:15</span>
+          <span class="opis">Transport uczestników autobusem na start (Kręgi Kamienne – Odry)</span>
+        </div>
+        <div class="czas-item strzal">
+          <span class="godz">13:00</span>
+          <span class="opis">STRZAŁ STARTOWY | półmaraton 21 km</span>
+        </div>
+        <div class="czas-item">
+          <span class="godz">do 16:00</span>
+          <span class="opis">Finiszowanie, dekoracje, ceremonia wręczenia nagród</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TRASA
+═══════════════════════════════════════════ -->
+<section class="bg-ciemny">
+  <div class="section-inner">
+    <span class="section-label">Trasy</span>
+    <h2>Trasy biegów</h2>
+
+    <div class="trasa-cols">
+
+      <div class="trasa-karta">
+        <h3>Szmaragd Borów – 10 km</h3>
+        <div class="trasa-row">
+          <strong>Przebieg</strong>
+          <span>Ostrowite – Konewki – Dąbki – Ustronie – Konewki – Ostrowite</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Nawierzchnia</strong>
+          <span>Asfalt (60%), płyty YOMB (15%), grunt leśny (25%)</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Profil</strong>
+          <span>Płaski, bez znaczących przewyższeń</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Oznakowanie</strong>
+          <span>Co 1 km, zabezpieczona przez wolontariuszy, OSP i Policję</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Punkty z wodą</strong>
+          <span>Na 4 km i 7 km</span>
+        </div>
+      </div>
+
+      <div class="trasa-karta">
+        <h3>Kręgi Mocy – 21 km</h3>
+        <div class="trasa-row">
+          <strong>Przebieg</strong>
+          <span>Kręgi Kamienne (Odry) → droga leśna → Odry → Gotelp → Łubna → Malachin → Czersk, Plac Piekarka</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Nawierzchnia</strong>
+          <span>Asfalt (75%), tłuczeń (10%), kostka betonowa (10%), płyty YOMB (5%)</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Profil</strong>
+          <span>Płaski z lokalnymi przewyższeniami (Odry, Gotelp, Łubna, Malachin, Czersk)</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Oznakowanie</strong>
+          <span>Co 1 km, zabezpieczona przez służby porządkowe</span>
+        </div>
+        <div class="trasa-row">
+          <strong>Punkty odżywcze</strong>
+          <span>Co 5 km (ok. 5 km, 10 km, 15 km) + meta</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     GALERIA GRAFIK
+═══════════════════════════════════════════ -->
+<section class="bg-szary">
+  <div class="section-inner">
+    <span class="section-label">Galeria</span>
+    <h2>Klimat wydarzeń</h2>
+
+    <div class="galeria-grid">
+      <img src="images/18.png" alt="RUN CZERSK" />
+      <img src="images/19.png" alt="RUN CZERSK" />
+      <img src="images/21.png" alt="RUN CZERSK" />
+      <img src="images/22.png" alt="RUN CZERSK" />
+      <img src="images/23.png" alt="RUN CZERSK" />
+      <img src="images/24.png" alt="RUN CZERSK" />
+      <img src="images/25.png" alt="RUN CZERSK" />
+      <img src="images/27.png" alt="RUN CZERSK" />
+      <img src="images/28.png" alt="RUN CZERSK" />
+      <img src="images/29.png" alt="RUN CZERSK" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FINALNY CTA
+═══════════════════════════════════════════ -->
+<section class="bg-zielony" style="text-align:center;">
+  <div class="section-inner">
+    <img src="images/logo_biegi-02.png" alt="RUN CZERSK logo"
+         style="max-width:260px;width:100%;margin-bottom:24px;display:block;margin-left:auto;margin-right:auto;" />
+    <h2 style="color:#fff;">Wybierz swój dystans i dołącz do jubileuszu!</h2>
+    <p style="max-width:560px;margin:16px auto 32px;color:rgba(255,255,255,.85);">
+      Nie czekaj – miejsca są limitowane (300 na każdy bieg).
+      Zapisz się już teraz i bądź częścią historii Czerska.
+    </p>
+    <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
+    <a href="#" class="btn-cta">Zapisz się teraz</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STOPKA
+═══════════════════════════════════════════ -->
+<footer class="stopka">
+  <img src="images/logo_biegi-01.png" alt="RUN CZERSK 1926–2026" />
+  <p>RUN CZERSK 1926–2026 &nbsp;·&nbsp; Jubileuszowe biegi na 100-lecie Czerska</p>
+  <p style="margin-top:8px;">Organizator: Gmina Czersk</p>
+</footer>
+
+</body>
+</html>
