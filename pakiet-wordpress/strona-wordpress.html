@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RUN CZERSK 1926–2026 – Jubileuszowe biegi na 100-lecie Czerska</title>
 <style>
-/* =============================================
-   INSTRUKCJA WGRYWANIA GRAFIK NA WORDPRESS:
-   1. W panelu WP wejdź w Media → Dodaj nowe
-   2. Wgraj wszystkie pliki PNG z folderu "GRAFIKI BIEGI"
-   3. Skopiuj URL każdego pliku i zastąp ścieżki poniżej:
-      "images/logo_biegi-01.png"  →  URL z WordPress
-      "images/15.png" → URL z WordPress  itd.
-   =============================================
-*/
 
 * {
   box-sizing: border-box;
@@ -52,7 +43,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('images/20.png') center/cover no-repeat;
+  background: url('https://yogoevents.pl/wp-content/uploads/2026/03/20.png') center/cover no-repeat;
   opacity: 0.18;
 }
 
@@ -87,13 +78,21 @@ body {
   color: #d4e8d4;
 }
 
+/* dwa przyciski CTA obok siebie */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
 .btn-cta {
   display: inline-block;
   background: var(--zloty);
   color: var(--ciemny);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  padding: 16px 42px;
+  padding: 16px 36px;
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: 1px;
@@ -102,6 +101,23 @@ body {
 }
 
 .btn-cta:hover { background: #e0b730; transform: translateY(-2px); }
+
+.btn-cta-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--biel);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid rgba(255,255,255,.6);
+  transition: border-color .2s, background .2s, transform .2s;
+}
+
+.btn-cta-outline:hover { border-color: #fff; background: rgba(255,255,255,.1); transform: translateY(-2px); }
 
 /* ── SEKCJE ───────────────────────────────── */
 section { padding: 64px 20px; }
@@ -174,7 +190,7 @@ p { margin-bottom: 14px; }
 
 .krok p { margin: 0; font-size: 0.97rem; }
 
-/* ── O WYDARZENIU – obraz + tekst ────────── */
+/* ── O WYDARZENIU ────────────────────────── */
 .o-wydarzeniu-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -188,6 +204,46 @@ p { margin-bottom: 14px; }
   display: block;
   box-shadow: 0 4px 24px rgba(0,0,0,.18);
 }
+
+.btn-group-dark {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.btn-bieg {
+  display: inline-block;
+  background: var(--zielony);
+  color: var(--biel);
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background .2s;
+}
+
+.btn-bieg:hover { background: var(--zielony-j); }
+
+.btn-bieg-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--zielony);
+  padding: 10px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--zielony);
+  transition: background .2s, color .2s;
+}
+
+.btn-bieg-outline:hover { background: var(--zielony); color: var(--biel); }
 
 /* ── DWA BIEGI ────────────────────────────── */
 .biegi-grid {
@@ -213,7 +269,7 @@ p { margin-bottom: 14px; }
   display: block;
 }
 
-.bieg-karta-body { padding: 28px 24px; flex: 1; }
+.bieg-karta-body { padding: 28px 24px; flex: 1; display: flex; flex-direction: column; }
 
 .bieg-badge {
   display: inline-block;
@@ -231,23 +287,7 @@ p { margin-bottom: 14px; }
 .bieg-karta h3 { color: var(--ciemny); font-size: 1.2rem; }
 .bieg-karta .bieg-meta { color: #666; font-size: 0.9rem; margin-bottom: 14px; }
 .bieg-karta p { font-size: 0.95rem; }
-
-.btn-bieg {
-  display: inline-block;
-  margin-top: 18px;
-  background: var(--zielony);
-  color: var(--biel);
-  padding: 12px 28px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background .2s;
-}
-
-.btn-bieg:hover { background: var(--zielony-j); }
+.bieg-karta .btn-bieg { margin-top: auto; align-self: flex-start; }
 
 /* ── TABELE SZCZEGÓŁÓW ────────────────────── */
 .tabele-grid {
@@ -282,6 +322,11 @@ table.szczegoly td:first-child {
   color: var(--zloty);
   white-space: nowrap;
   width: 38%;
+}
+
+.tabela-wrap .btn-bieg {
+  margin-top: 20px;
+  display: inline-block;
 }
 
 /* ── HARMONOGRAM ──────────────────────────── */
@@ -395,6 +440,7 @@ table.szczegoly td:first-child {
   }
   .hero { padding: 40px 16px 50px; }
   section { padding: 44px 16px; }
+  .btn-group, .btn-group-dark { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -405,8 +451,9 @@ table.szczegoly td:first-child {
 ═══════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-inner">
-    <!-- LOGO: po wgraniu na WP zastąp src odpowiednim URL -->
-    <img class="hero-logo" src="images/logo_biegi-01.png" alt="RUN CZERSK 1926–2026 – logo" />
+    <img class="hero-logo"
+         src="https://yogoevents.pl/wp-content/uploads/2026/03/logo_biegi-01.png"
+         alt="RUN CZERSK 1926–2026 – logo" />
 
     <div class="hero-kicker">100-lecie Czerska · 2026</div>
 
@@ -419,8 +466,14 @@ table.szczegoly td:first-child {
       Wybierz swój dystans i dołącz do jubileuszu.
     </p>
 
-    <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
-    <a href="#" class="btn-cta">Zapisz się i biegnij w jubileuszu</a>
+    <div class="btn-group">
+      <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn-cta">
+        Zapisz się – Szmaragd Borów (10 km)
+      </a>
+      <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn-cta-outline">
+        Zapisz się – Kręgi Mocy (21 km)
+      </a>
+    </div>
   </div>
 </section>
 
@@ -476,11 +529,12 @@ table.szczegoly td:first-child {
           Łągu, Odrach, Malachinie czy gdziekolwiek w gminie –
           <strong>to jest Twoje święto. I Twój bieg.</strong>
         </p>
-        <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
-        <a href="#" class="btn-bieg">Zarejestruj się</a>
+        <div class="btn-group-dark">
+          <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn-bieg">Szmaragd Borów – 10 km</a>
+          <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn-bieg-outline">Kręgi Mocy – 21 km</a>
+        </div>
       </div>
-      <!-- Grafika główna wydarzenia -->
-      <img src="images/17.png" alt="RUN CZERSK – event" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/17.png" alt="RUN CZERSK – event" />
     </div>
   </div>
 </section>
@@ -505,7 +559,8 @@ table.szczegoly td:first-child {
 
       <!-- BIEG 1: SZMARAGD BORÓW -->
       <div class="bieg-karta">
-        <img src="images/15.png" alt="Szmaragd Borów – bieg 10 km" />
+        <img src="https://yogoevents.pl/wp-content/uploads/2026/03/15.png"
+             alt="Szmaragd Borów – bieg 10 km" />
         <div class="bieg-karta-body">
           <span class="bieg-badge">Bieg nr 1 · Bieg również dla dzieci!</span>
           <h3>Szmaragd Borów</h3>
@@ -514,14 +569,14 @@ table.szczegoly td:first-child {
             Letni bieg przez serce Borów Tucholskich.
             Start i meta w <strong>Centrum Rekreacji w Ostrowitem</strong> nad jeziorem.
           </p>
-          <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
-          <a href="#" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
+          <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
         </div>
       </div>
 
       <!-- BIEG 2: KRĘGI MOCY -->
       <div class="bieg-karta">
-        <img src="images/16.png" alt="Kręgi Mocy – półmaraton 21 km" />
+        <img src="https://yogoevents.pl/wp-content/uploads/2026/03/16.png"
+             alt="Kręgi Mocy – półmaraton 21 km" />
         <div class="bieg-karta-body">
           <span class="bieg-badge">Bieg nr 2 · Półmaraton jubileuszowy</span>
           <h3>Kręgi Mocy</h3>
@@ -530,8 +585,7 @@ table.szczegoly td:first-child {
             Jubileuszowy półmaraton z prehistorycznych Kręgów Kamiennych do serca Czerska.
             Meta na <strong>Placu Piekarka</strong>.
           </p>
-          <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
-          <a href="#" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
+          <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn-bieg">Zapisz się – 60 lub 80 zł</a>
         </div>
       </div>
 
@@ -569,6 +623,7 @@ table.szczegoly td:first-child {
             <tr><td>Opłata startowa</td><td>60 zł (zapis na oba biegi) | 80 zł (pojedynczy start)</td></tr>
           </tbody>
         </table>
+        <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn-bieg">Zapisz się na Szmaragd Borów</a>
       </div>
 
       <!-- TABELA KRĘGI MOCY -->
@@ -592,6 +647,7 @@ table.szczegoly td:first-child {
             <tr><td>Opłata startowa</td><td>60 zł (zapis na oba biegi) | 80 zł (pojedynczy start)</td></tr>
           </tbody>
         </table>
+        <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn-bieg">Zapisz się na Kręgi Mocy</a>
       </div>
 
     </div>
@@ -734,16 +790,16 @@ table.szczegoly td:first-child {
     <h2>Klimat wydarzeń</h2>
 
     <div class="galeria-grid">
-      <img src="images/18.png" alt="RUN CZERSK" />
-      <img src="images/19.png" alt="RUN CZERSK" />
-      <img src="images/21.png" alt="RUN CZERSK" />
-      <img src="images/22.png" alt="RUN CZERSK" />
-      <img src="images/23.png" alt="RUN CZERSK" />
-      <img src="images/24.png" alt="RUN CZERSK" />
-      <img src="images/25.png" alt="RUN CZERSK" />
-      <img src="images/27.png" alt="RUN CZERSK" />
-      <img src="images/28.png" alt="RUN CZERSK" />
-      <img src="images/29.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/18.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/19.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/21.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/22.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/23.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/24.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/25.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/27.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/28.png" alt="RUN CZERSK" />
+      <img src="https://yogoevents.pl/wp-content/uploads/2026/03/29.png" alt="RUN CZERSK" />
     </div>
   </div>
 </section>
@@ -754,15 +810,22 @@ table.szczegoly td:first-child {
 ═══════════════════════════════════════════ -->
 <section class="bg-zielony" style="text-align:center;">
   <div class="section-inner">
-    <img src="images/logo_biegi-02.png" alt="RUN CZERSK logo"
+    <img src="https://yogoevents.pl/wp-content/uploads/2026/03/logo_biegi-02.png"
+         alt="RUN CZERSK logo"
          style="max-width:260px;width:100%;margin-bottom:24px;display:block;margin-left:auto;margin-right:auto;" />
     <h2 style="color:#fff;">Wybierz swój dystans i dołącz do jubileuszu!</h2>
     <p style="max-width:560px;margin:16px auto 32px;color:rgba(255,255,255,.85);">
       Nie czekaj – miejsca są limitowane (300 na każdy bieg).
       Zapisz się już teraz i bądź częścią historii Czerska.
     </p>
-    <!-- LINK DO REJESTRACJI – podmień href="#" na właściwy URL -->
-    <a href="#" class="btn-cta">Zapisz się teraz</a>
+    <div class="btn-group">
+      <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn-cta">
+        Szmaragd Borów – 10 km
+      </a>
+      <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn-cta-outline">
+        Kręgi Mocy – 21 km
+      </a>
+    </div>
   </div>
 </section>
 
@@ -771,7 +834,8 @@ table.szczegoly td:first-child {
      STOPKA
 ═══════════════════════════════════════════ -->
 <footer class="stopka">
-  <img src="images/logo_biegi-01.png" alt="RUN CZERSK 1926–2026" />
+  <img src="https://yogoevents.pl/wp-content/uploads/2026/03/logo_biegi-01.png"
+       alt="RUN CZERSK 1926–2026" />
   <p>RUN CZERSK 1926–2026 &nbsp;·&nbsp; Jubileuszowe biegi na 100-lecie Czerska</p>
   <p style="margin-top:8px;">Organizator: Gmina Czersk</p>
 </footer>
