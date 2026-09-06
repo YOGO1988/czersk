@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="RUN CZERSK 1926–2026 – Jubileuszowe biegi na 100-lecie Czerska. Szmaragd Borów 10 km (20 czerwca) i Kręgi Mocy 21 km (5 września 2026).">
-<title>RUN CZERSK 1926–2026 | Jubileuszowe biegi na 100-lecie Czerska</title>
+<meta name="description" content="RUN CZERSK 1926–2026 – Podsumowanie jubileuszowych biegów na 100-lecie Czerska. Wyniki, Klasyfikacja Generalna, zdjęcia.">
+<title>RUN CZERSK 1926–2026 | Wyniki i Klasyfikacja Generalna</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,6 +128,13 @@ section.tight { padding: 64px 24px; }
 }
 .btn-outline-green:hover { background: var(--green-700); color: var(--white); }
 
+.btn-fb {
+  background: #1877f2;
+  color: var(--white);
+  border-color: #1877f2;
+}
+.btn-fb:hover { background: #1565d8; border-color: #1565d8; }
+
 .btn-group { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .btn-group.center { justify-content: center; }
 
@@ -247,8 +254,7 @@ nav {
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  divide: auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .stat-item {
@@ -297,52 +303,6 @@ nav {
 .about-text h2 { margin-bottom: 20px; }
 .about-text p  { font-size: 1.02rem; }
 .about-text .btn-group { margin-top: 32px; }
-
-/* ─────────────────────────────────────────────
-   KROKI (4 kroki)
-───────────────────────────────────────────── */
-.kroki-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 56px;
-}
-.kroki-header h2 { margin-bottom: 12px; }
-
-.kroki-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  max-width: 1120px;
-  margin: 0 auto;
-  background: var(--gray-200);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.krok {
-  background: var(--white);
-  padding: 36px 28px;
-  position: relative;
-}
-
-.krok-num {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--green-100);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-
-.krok h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--green-700);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-}
-
-.krok p { font-size: .93rem; color: var(--gray-600); }
 
 /* ─────────────────────────────────────────────
    DWA BIEGI
@@ -404,6 +364,7 @@ nav {
 }
 .bieg-tag-a { background: rgba(200,162,39,.2); color: var(--gold-l); border: 1px solid rgba(200,162,39,.3); }
 .bieg-tag-b { background: rgba(67,160,71,.2);  color: #7acc7d;       border: 1px solid rgba(67,160,71,.3); }
+.bieg-tag-done { background: rgba(255,255,255,.08); color: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.12); }
 
 .bieg-card h3 {
   font-size: 1.5rem;
@@ -419,122 +380,6 @@ nav {
 .bieg-card p { font-size: .95rem; color: rgba(255,255,255,.68); margin-bottom: 0; flex: 1; }
 
 .bieg-card .btn { margin-top: 24px; align-self: flex-start; }
-
-/* ─────────────────────────────────────────────
-   SZCZEGÓŁY – tabele
-───────────────────────────────────────────── */
-.tabele-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.tabela-blok { }
-
-.tabela-blok-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--gold);
-}
-
-.tabela-blok-num {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: #111;
-  font-weight: 800;
-  font-size: .9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.tabela-blok h3 { color: var(--white); font-size: 1.05rem; font-weight: 700; }
-
-table.t {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .87rem;
-}
-table.t tr:last-child td { border-bottom: none; }
-table.t td {
-  padding: 9px 10px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  vertical-align: top;
-  line-height: 1.5;
-}
-table.t td:first-child {
-  width: 42%;
-  font-weight: 600;
-  color: var(--gold);
-  padding-right: 16px;
-}
-table.t td:last-child { color: rgba(255,255,255,.78); }
-
-.tabela-blok .btn { margin-top: 20px; }
-
-/* ─────────────────────────────────────────────
-   HARMONOGRAM
-───────────────────────────────────────────── */
-.harmonogram-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  max-width: 1120px;
-  margin: 40px auto 0;
-}
-
-.harmonogram-col h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  color: var(--green-700);
-  border-left: 3px solid var(--green-700);
-  padding-left: 12px;
-  margin-bottom: 24px;
-}
-
-.timeline { list-style: none; }
-
-.tl-item {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 14px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--gray-200);
-  align-items: start;
-}
-
-.tl-item:last-child { border-bottom: none; }
-
-.tl-time {
-  font-weight: 700;
-  font-size: .85rem;
-  color: var(--green-700);
-  padding-top: 2px;
-}
-
-.tl-desc {
-  font-size: .9rem;
-  color: var(--gray-600);
-}
-
-.tl-item.highlight {
-  background: var(--green-100);
-  margin: 0 -12px;
-  padding: 12px 12px;
-  border-radius: 6px;
-  border-bottom: none;
-}
-.tl-item.highlight .tl-time  { color: var(--green-700); }
-.tl-item.highlight .tl-desc  { font-weight: 700; color: var(--gray-900); }
 
 /* ─────────────────────────────────────────────
    TRASY
@@ -577,37 +422,293 @@ table.t td:last-child { color: rgba(255,255,255,.78); }
 .trasa-row dd { color: rgba(255,255,255,.8); }
 
 /* ─────────────────────────────────────────────
-   GALERIA
+   GRAND PRIX WYNIKI – klasyfikacja
 ───────────────────────────────────────────── */
-.galeria-grid {
+.gp-section {
+  background: #0c1a0d;
+}
+
+.gp-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.gp-trophy {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-l));
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(200,162,39,.35);
+}
+
+.gp-header h2 { color: var(--white); margin-bottom: 10px; }
+.gp-header p { color: rgba(255,255,255,.6); max-width: 560px; margin: 0 auto; }
+
+.gp-tables {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto 40px;
+}
+
+.gp-col {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gp-col-head {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gp-col-icon {
+  font-size: 1.4rem;
+}
+
+.gp-col-head h3 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.gp-col-head .gp-col-label {
+  font-size: .72rem;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.gp-row {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  align-items: center;
+  transition: background .15s;
+}
+.gp-row:last-child { border-bottom: none; }
+.gp-row:hover { background: rgba(255,255,255,.03); }
+
+.gp-row.top1 { background: rgba(200,162,39,.1); }
+.gp-row.top2 { background: rgba(180,180,180,.06); }
+.gp-row.top3 { background: rgba(180,120,60,.06); }
+
+.gp-place {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.gp-place-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.5);
+  font-weight: 800;
+  font-size: .85rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.gp-info {}
+
+.gp-name {
+  font-weight: 700;
+  color: var(--white);
+  font-size: .95rem;
+  line-height: 1.3;
+}
+
+.gp-city {
+  font-size: .78rem;
+  color: rgba(255,255,255,.45);
+  margin-top: 2px;
+}
+
+.gp-city .czersk-badge {
+  display: inline-block;
+  background: rgba(67,160,71,.25);
+  color: #7acc7d;
+  border: 1px solid rgba(67,160,71,.3);
+  border-radius: 10px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 1px 7px;
+  margin-left: 6px;
+}
+
+.gp-times {
+  text-align: right;
+}
+
+.gp-total {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.gp-splits {
+  font-size: .72rem;
+  color: rgba(255,255,255,.35);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* Nagroda specjalna */
+.gp-special {
+  max-width: 1120px;
+  margin: 0 auto 0;
+  background: rgba(46,125,50,.2);
+  border: 1px solid rgba(67,160,71,.3);
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.gp-special-icon { font-size: 2rem; }
+
+.gp-special h3 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+.gp-special-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gp-special-list li {
+  color: rgba(255,255,255,.82);
+  font-size: .92rem;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.gp-special-list .s-cat {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.gp-special-list .s-time {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--gold-l);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────
+   WYNIKI LINKI
+───────────────────────────────────────────── */
+.wyniki-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   max-width: 1120px;
   margin: 40px auto 0;
 }
 
-.galeria-item {
-  overflow: hidden;
-  border-radius: 6px;
-  aspect-ratio: 940/788;
-  background: var(--gray-200);
+.wynik-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color .2s, background .2s;
+}
+.wynik-card:hover { border-color: var(--gold); background: rgba(200,162,39,.06); }
+
+.wynik-card-icon { font-size: 1.8rem; line-height: 1; }
+
+.wynik-card h3 {
+  color: var(--white);
+  font-size: .95rem;
+  font-weight: 700;
 }
 
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .3s;
+.wynik-card p {
+  color: rgba(255,255,255,.5);
+  font-size: .82rem;
+  flex: 1;
 }
-.galeria-item:hover img { transform: scale(1.06); }
 
-/* duży kafelek */
-.galeria-item.big {
-  grid-column: span 2;
-  grid-row: span 2;
-  aspect-ratio: auto;
+.wynik-card .btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* ─────────────────────────────────────────────
+   FACEBOOK / CELEBRACJA
+───────────────────────────────────────────── */
+.fb-section {
+  background: linear-gradient(135deg, #0c1a0d 0%, #112211 100%);
+  text-align: center;
+}
+
+.fb-section h2 { color: var(--white); margin-bottom: 16px; }
+.fb-section p { color: rgba(255,255,255,.65); max-width: 560px; margin: 0 auto 36px; }
+
+/* ─────────────────────────────────────────────
+   100-LECIE INNE WYDARZENIA
+───────────────────────────────────────────── */
+.jubilee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1120px;
+  margin: 40px auto 0;
+}
+
+.jubilee-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 28px 24px;
+  transition: box-shadow .2s, transform .2s;
+}
+.jubilee-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+
+.jubilee-card-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.jubilee-card h3 {
+  font-size: 1rem;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.jubilee-card p {
+  font-size: .88rem;
+  color: var(--gray-600);
 }
 
 /* ─────────────────────────────────────────────
@@ -733,34 +834,40 @@ footer p + p { margin-top: 6px; }
    RESPONSIVE
 ───────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .stats-inner        { grid-template-columns: 1fr; }
-  .stat-item          { border-right: none; border-top: 1px solid rgba(255,255,255,.1); }
-  .stat-item:first-child { border-top: none; }
+  .stats-inner        { grid-template-columns: repeat(2, 1fr); }
+  .stat-item          { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .stat-item:nth-child(odd)  { border-right: 1px solid rgba(255,255,255,.1); }
+  .stat-item:nth-last-child(-n+2) { border-bottom: none; }
 
   .about-grid         { grid-template-columns: 1fr; gap: 40px; }
   .about-grid img     { order: -1; max-width: 560px; margin: 0 auto; }
   .about-text         { order: 1; }
 
-  .kroki-grid         { grid-template-columns: 1fr 1fr; }
-
   .biegi-grid         { grid-template-columns: 1fr; max-width: 560px; }
 
-  .tabele-grid        { grid-template-columns: 1fr; max-width: 640px; }
+  .gp-tables          { grid-template-columns: 1fr; }
 
-  .harmonogram-grid   { grid-template-columns: 1fr; gap: 40px; }
+  .gp-special         { grid-template-columns: 1fr; }
+  .gp-special-icon    { text-align: center; }
+
+  .wyniki-grid        { grid-template-columns: 1fr; max-width: 500px; }
 
   .trasy-grid         { grid-template-columns: 1fr; max-width: 640px; }
 
-  .galeria-grid       { grid-template-columns: repeat(3, 1fr); }
-  .galeria-item.big   { grid-column: span 1; grid-row: span 1; aspect-ratio: 940/788; }
+  .jubilee-grid       { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
   section             { padding: 64px 16px; }
   section.tight       { padding: 48px 16px; }
 
-  .kroki-grid         { grid-template-columns: 1fr; }
-  .galeria-grid       { grid-template-columns: repeat(2, 1fr); }
+  .stats-inner        { grid-template-columns: repeat(2, 1fr); }
+
+  .gp-row             { grid-template-columns: 40px 1fr auto; gap: 8px; padding: 12px 16px; }
+  .gp-col-head        { padding: 16px 16px; }
+  .gp-splits          { display: none; }
+
+  .jubilee-grid       { grid-template-columns: 1fr; }
 
   .btn                { font-size: .82rem; padding: 12px 22px; }
   .btn-group          { flex-direction: column; align-items: stretch; }
@@ -781,13 +888,13 @@ footer p + p { margin-top: 6px; }
            alt="RUN CZERSK 1926–2026">
     </a>
     <ul class="nav-links">
-      <li><a href="#o-wydarzeniu">O wydarzeniu</a></li>
+      <li><a href="#wyniki">Klasyfikacja</a></li>
       <li><a href="#biegi">Biegi</a></li>
-      <li><a href="#szczegoly">Szczegóły</a></li>
-      <li><a href="#harmonogram">Harmonogram</a></li>
+      <li><a href="#trasy">Trasy</a></li>
+      <li><a href="#swietuj">Świętuj</a></li>
     </ul>
-    <a href="https://dostartu.pl/GminneCentrumKulturywCzersku-or14312"
-       class="btn btn-gold nav-cta">Zapisz się</a>
+    <a href="https://yogoevents.pl/wp-content/uploads/2026/09/wyniki_Kregi-Mocy_21km_20260905_141348.pdf"
+       class="btn btn-gold nav-cta" target="_blank" rel="noopener">Wyniki PDF</a>
   </div>
 </nav>
 
@@ -802,22 +909,22 @@ footer p + p { margin-top: 6px; }
          src="https://yogoevents.pl/wp-content/uploads/2026/03/logo-biegi_biale.png"
          alt="RUN CZERSK 1926–2026 logo">
 
-    <div class="hero-kicker">Jubileusz 100-lecia Czerska · 2026</div>
+    <div class="hero-kicker">Jubileusz 100-lecia Czerska · 20 czerwca + 5 września 2026</div>
 
-    <h1>To się dzieje tylko raz.<br>Biegnij przez 100 lat historii.</h1>
+    <h1>Dziękujemy!<br>Pobiegliście przez historię.</h1>
 
     <p class="hero-sub">
-      Sto lat temu Czersk stał się miastem. Dziś jesteś częścią tej historii –
-      na trasie przez lasy Borów Tucholskich, przez prehistoryczne Kręgi Kamienne,
-      przez ulice swojego miasta.
+      Dwa biegi. Dwa wyjątkowe dni. Setki biegaczy z całej Polski na trasach przez Bory Tucholskie
+      i Kręgi Kamienne. Razem napisaliście kawałek historii Czerska –
+      dokładnie sto lat po tym, jak miasto otrzymało prawa miejskie.
     </p>
 
     <div class="btn-group">
-      <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn btn-gold">
-        Szmaragd Borów – 10 km
+      <a href="#wyniki" class="btn btn-gold">
+        Klasyfikacja Generalna
       </a>
-      <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn btn-ghost">
-        Kręgi Mocy – 21 km
+      <a href="https://www.facebook.com/gmina.czersk" class="btn btn-ghost" target="_blank" rel="noopener">
+        Świętuj z nami na Facebooku
       </a>
     </div>
   </div>
@@ -830,16 +937,20 @@ footer p + p { margin-top: 6px; }
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item">
-      <span class="stat-num">2</span>
-      <span class="stat-label">biegi</span>
+      <span class="stat-num">109</span>
+      <span class="stat-label">Finisherów · Szmaragd Borów</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">87</span>
+      <span class="stat-label">Finisherów · Kręgi Mocy</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">54</span>
+      <span class="stat-label">Ukończyło oba biegi</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">100</span>
       <span class="stat-label">lat historii Czerska</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">2026</span>
-      <span class="stat-label">rok jubileuszu</span>
     </div>
   </div>
 </div>
@@ -851,82 +962,271 @@ footer p + p { margin-top: 6px; }
 <section id="o-wydarzeniu">
   <div class="about-grid">
     <div class="about-text">
-      <span class="label">O wydarzeniu</span>
-      <h2>RUN CZERSK<br>1926–2026</h2>
+      <span class="label">Podsumowanie</span>
+      <h2>Misja<br>ukończona!</h2>
       <p>
-        Jedno z największych wydarzeń sportowych w historii gminy Czersk –
-        organizowane z okazji <strong>stuletniej rocznicy nadania miastu praw miejskich</strong>.
-        Dwa biegi. Dwie trasy. Dwa jubileuszowe medale.
+        RUN CZERSK 1926–2026 przeszedł do historii jako jedno z największych sportowych
+        wydarzeń jubileuszowych w gminie Czersk. Przez Bory Tucholskie i prehistoryczne
+        Kręgi Kamienne pobiegły setki uczestników z całej Polski.
       </p>
       <p>
-        To nie jest zwykły bieg, który pojawia się co roku. To wydarzenie wyjątkowe –
-        zaplanowane specjalnie na ten jubileusz. Jeśli mieszkasz w Czersku, Ostrowitem,
-        Łągu, Odrach, Malachinie czy gdziekolwiek w gminie –
-        <strong>to jest Twoje święto. I Twój bieg.</strong>
+        <strong>20 czerwca</strong> nad jeziorem w Ostrowitem padł strzał startowy Szmaragdu Borów –
+        10-kilometrowego biegu przez serce Borów Tucholskich.
+        <strong>5 września</strong> ruszył jubileuszowy półmaraton Kręgi Mocy –
+        z prehistorycznych Odrów do mety na Placu Piekarka w centrum Czerska.
       </p>
       <p>
-        Rejestrując się na oba starty, zyskujesz specjalną cenę i
-        <strong>medal 100-lecia w kompletnej formie</strong> – dwie połowy tworzą
-        wyjątkową pamiątkę.
+        Każdy uczestnik obu biegów stał się częścią wyjątkowej rywalizacji –
+        <strong>Klasyfikacji Generalnej RUN CZERSK</strong>, gdzie liczy się suma
+        czasów z obydwu dystansów.
       </p>
       <div class="btn-group">
-        <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn btn-green">Szmaragd Borów</a>
-        <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn btn-outline-green">Kręgi Mocy</a>
+        <a href="#wyniki" class="btn btn-green">Zobacz klasyfikację generalną</a>
       </div>
     </div>
     <img src="https://yogoevents.pl/wp-content/uploads/2026/03/POSTY-FACEBOOK-100lecie-9.png"
-         alt="RUN CZERSK – jubileuszowe biegi">
+         alt="RUN CZERSK 1926–2026 – jubileuszowe biegi">
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
-     JAK SIĘ ZAPISAĆ
+     GRAND PRIX – KLASYFIKACJA GENERALNA
 ══════════════════════════════════════════════ -->
-<section class="tight bg-gray" id="rejestracja">
-  <div class="wrap">
-    <div class="kroki-header">
-      <span class="label">Rejestracja</span>
-      <h2>Jak się zapisać?</h2>
+<section class="gp-section" id="wyniki" style="padding: 88px 24px;">
+  <div class="gp-header">
+    <div class="gp-trophy">★</div>
+    <span style="display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Grand Prix · Suma czasów obu biegów</span>
+    <h2>Klasyfikacja Generalna<br>RUN CZERSK 1926–2026</h2>
+    <p>Top 5 kobiet i mężczyzn, którzy ukończyli oba biegi.<br>Wyniki nieoficjalne · suma: Szmaragd Borów 10 km + Kręgi Mocy 21 km.</p>
+  </div>
+
+  <div class="gp-tables">
+
+    <!-- MĘŻCZYŹNI -->
+    <div class="gp-col">
+      <div class="gp-col-head">
+        <div class="gp-col-icon">🏃</div>
+        <div>
+          <div class="gp-col-label">Kategoria</div>
+          <h3>Mężczyźni</h3>
+        </div>
+      </div>
+
+      <div class="gp-row top1">
+        <div class="gp-place">🥇</div>
+        <div class="gp-info">
+          <div class="gp-name">Krystian Kurowski</div>
+          <div class="gp-city">Kazimierz Biskupi</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">1:48:44</div>
+          <div class="gp-splits">35:11 + 1:13:33</div>
+        </div>
+      </div>
+
+      <div class="gp-row top2">
+        <div class="gp-place">🥈</div>
+        <div class="gp-info">
+          <div class="gp-name">Mateusz Dajnowski</div>
+          <div class="gp-city">Angowice</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">1:51:11</div>
+          <div class="gp-splits">36:25 + 1:14:46</div>
+        </div>
+      </div>
+
+      <div class="gp-row top3">
+        <div class="gp-place">🥉</div>
+        <div class="gp-info">
+          <div class="gp-name">Radosław Januszewski</div>
+          <div class="gp-city">Bydgoszcz</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">1:51:52</div>
+          <div class="gp-splits">35:24 + 1:16:28</div>
+        </div>
+      </div>
+
+      <div class="gp-row">
+        <div class="gp-place"><span class="gp-place-num">4</span></div>
+        <div class="gp-info">
+          <div class="gp-name">Bartosz Paradowski</div>
+          <div class="gp-city">Struga <span class="czersk-badge">gmina Czersk</span></div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">1:54:40</div>
+          <div class="gp-splits">37:07 + 1:17:33</div>
+        </div>
+      </div>
+
+      <div class="gp-row">
+        <div class="gp-place"><span class="gp-place-num">5</span></div>
+        <div class="gp-info">
+          <div class="gp-name">Arkadiusz Orlikowski</div>
+          <div class="gp-city">Przechlewo</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:03:39</div>
+          <div class="gp-splits">39:58 + 1:23:41</div>
+        </div>
+      </div>
     </div>
 
-    <div class="kroki-grid">
-      <div class="krok">
-        <div class="krok-num">01</div>
-        <h3>Wybierz bieg</h3>
-        <p>Szmaragd Borów (10 km), Kręgi Mocy (21 km) lub oba – i oszczędzaj.</p>
+    <!-- KOBIETY -->
+    <div class="gp-col">
+      <div class="gp-col-head">
+        <div class="gp-col-icon">🏃‍♀️</div>
+        <div>
+          <div class="gp-col-label">Kategoria</div>
+          <h3>Kobiety</h3>
+        </div>
       </div>
-      <div class="krok">
-        <div class="krok-num">02</div>
-        <h3>Zarejestruj się</h3>
-        <p>Wypełnij formularz na stronie organizatora i opłać start (80 zł lub 120 zł za oba).</p>
+
+      <div class="gp-row top1">
+        <div class="gp-place">🥇</div>
+        <div class="gp-info">
+          <div class="gp-name">Paulina Głąb</div>
+          <div class="gp-city">Rytel <span class="czersk-badge">gmina Czersk</span></div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:20:33</div>
+          <div class="gp-splits">45:22 + 1:35:11</div>
+        </div>
       </div>
-      <div class="krok">
-        <div class="krok-num">03</div>
-        <h3>Przyjdź z dowodem</h3>
-        <p>W dniu zawodów zgłoś się do Biura Zawodów z dokumentem tożsamości.</p>
+
+      <div class="gp-row top2">
+        <div class="gp-place">🥈</div>
+        <div class="gp-info">
+          <div class="gp-name">Ewelina Lahn</div>
+          <div class="gp-city">Charzykowy</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:25:11</div>
+          <div class="gp-splits">48:59 + 1:36:12</div>
+        </div>
       </div>
-      <div class="krok">
-        <div class="krok-num">04</div>
-        <h3>Biegnij!</h3>
-        <p>Odbierz numer startowy, rozgrzej się i bądź częścią historii Czerska.</p>
+
+      <div class="gp-row top3">
+        <div class="gp-place">🥉</div>
+        <div class="gp-info">
+          <div class="gp-name">Marta Kamińska</div>
+          <div class="gp-city">Dąbrowa</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:36:22</div>
+          <div class="gp-splits">53:13 + 1:43:09</div>
+        </div>
       </div>
+
+      <div class="gp-row">
+        <div class="gp-place"><span class="gp-place-num">4</span></div>
+        <div class="gp-info">
+          <div class="gp-name">Justyna Brzezińska</div>
+          <div class="gp-city">Czersk <span class="czersk-badge">gmina Czersk</span></div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:37:36</div>
+          <div class="gp-splits">47:44 + 1:49:52</div>
+        </div>
+      </div>
+
+      <div class="gp-row">
+        <div class="gp-place"><span class="gp-place-num">5</span></div>
+        <div class="gp-info">
+          <div class="gp-name">Michalina Majchrzak</div>
+          <div class="gp-city">Człuchów</div>
+        </div>
+        <div class="gp-times">
+          <div class="gp-total">2:54:10</div>
+          <div class="gp-splits">56:24 + 1:57:46</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NAGRODA SPECJALNA -->
+  <div class="gp-special">
+    <div class="gp-special-icon">🏅</div>
+    <div>
+      <h3>Nagroda specjalna – Najlepsi mieszkańcy gminy Czersk</h3>
+      <ul class="gp-special-list">
+        <li>
+          <span class="s-cat">K</span>
+          <span>Paulina Głąb – Rytel</span>
+          <span class="s-time">2:20:33</span>
+        </li>
+        <li>
+          <span class="s-cat">M</span>
+          <span>Bartosz Paradowski – Struga</span>
+          <span class="s-time">1:54:40</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
-     DWA BIEGI
+     WYNIKI – LINKI DO PDF
+══════════════════════════════════════════════ -->
+<section class="bg-dark" style="padding-top: 0;">
+  <div class="wrap">
+
+    <div style="text-align:center;margin-bottom:40px;">
+      <span class="label">Wyniki</span>
+      <h2>Oficjalne listy wyników</h2>
+    </div>
+
+    <div class="wyniki-grid">
+
+      <div class="wynik-card">
+        <div class="wynik-card-icon">📄</div>
+        <h3>Szmaragd Borów · 10 km</h3>
+        <p>Pełne wyniki biegu z 20 czerwca 2026. Wszystkie kategorie wiekowe i open.</p>
+        <a href="https://yogoevents.pl/wp-content/uploads/2026/06/wyniki_Szmaragd_Borow_10km.pdf"
+           class="btn btn-gold" target="_blank" rel="noopener">
+          Pobierz wyniki PDF
+        </a>
+      </div>
+
+      <div class="wynik-card">
+        <div class="wynik-card-icon">📄</div>
+        <h3>Kręgi Mocy · 21 km</h3>
+        <p>Pełne wyniki półmaratonu z 5 września 2026. Wszystkie kategorie wiekowe i open.</p>
+        <a href="https://yogoevents.pl/wp-content/uploads/2026/09/wyniki_Kregi-Mocy_21km_20260905_141348.pdf"
+           class="btn btn-green" target="_blank" rel="noopener">
+          Pobierz wyniki PDF
+        </a>
+      </div>
+
+      <div class="wynik-card">
+        <div class="wynik-card-icon">🏆</div>
+        <h3>Klasyfikacja Open · Grand Prix</h3>
+        <p>Pełna klasyfikacja open obejmująca wszystkich uczestników obu biegów.</p>
+        <a href="https://yogoevents.pl" class="btn btn-ghost" target="_blank" rel="noopener">
+          Pełna klasyfikacja
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     DWA BIEGI – PODSUMOWANIE
 ══════════════════════════════════════════════ -->
 <section class="bg-dark" id="biegi">
   <div class="wrap">
     <div class="biegi-header">
-      <span class="label">Program</span>
+      <span class="label">Wspomnienia</span>
       <h2>Dwa biegi – dwa oblicza Czerska</h2>
       <p style="color:rgba(255,255,255,.65);">
-        Każde wydarzenie ma własną trasę, atmosferę i charakter.
-        Wybierz jedno lub oba – i zdobądź kompletny medal 100-lecia.
+        Każde z wydarzeń miało własną trasę, atmosferę i niepowtarzalny charakter.
+        Razem złożyły się na jeden jubileusz.
       </p>
     </div>
 
@@ -939,16 +1239,17 @@ footer p + p { margin-top: 6px; }
                alt="Szmaragd Borów – bieg 10 km">
         </div>
         <div class="bieg-card-body">
-          <span class="bieg-tag bieg-tag-a">Bieg nr 1 · Również dla dzieci</span>
+          <span class="bieg-tag bieg-tag-a">Bieg nr 1 · 20 czerwca 2026</span>
           <h3>Szmaragd Borów</h3>
-          <p class="bieg-meta">10 km &nbsp;·&nbsp; 20 czerwca 2026 (sobota) &nbsp;·&nbsp; od 80 zł</p>
+          <p class="bieg-meta">10 km &nbsp;·&nbsp; Centrum Rekreacji w Ostrowitem</p>
           <p>
             Letni bieg przez serce Borów Tucholskich.
-            Start i meta w <strong style="color:rgba(255,255,255,.88);">Centrum Rekreacji
-            w Ostrowitem</strong> nad jeziorem. Trasa płaska – idealna na wynik.
+            Start i meta nad jeziorem w Ostrowitem. Trasa płaska –
+            przez Konewki, Dąbki i Ustronie z powrotem do mety.
           </p>
-          <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn btn-gold">
-            Zapisz się
+          <a href="https://yogoevents.pl/wp-content/uploads/2026/06/wyniki_Szmaragd_Borow_10km.pdf"
+             class="btn btn-gold" target="_blank" rel="noopener">
+            Wyniki · PDF
           </a>
         </div>
       </div>
@@ -960,16 +1261,17 @@ footer p + p { margin-top: 6px; }
                alt="Kręgi Mocy – półmaraton 21 km">
         </div>
         <div class="bieg-card-body">
-          <span class="bieg-tag bieg-tag-b">Bieg nr 2 · Półmaraton jubileuszowy</span>
+          <span class="bieg-tag bieg-tag-b">Bieg nr 2 · 5 września 2026</span>
           <h3>Kręgi Mocy</h3>
-          <p class="bieg-meta">21 km &nbsp;·&nbsp; 5 września 2026 (sobota) &nbsp;·&nbsp; od 80 zł</p>
+          <p class="bieg-meta">21 km &nbsp;·&nbsp; Odry → Plac Piekarka, Czersk</p>
           <p>
             Jubileuszowy półmaraton z prehistorycznych Kręgów Kamiennych w Odrach
-            do serca Czerska. Meta na
-            <strong style="color:rgba(255,255,255,.88);">Placu Piekarka</strong>.
+            przez Gotelp, Łubną i Malachin prosto do serca Czerska.
+            Meta na Placu Piekarka w centrum jubileuszowego miasta.
           </p>
-          <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn btn-green">
-            Zapisz się
+          <a href="https://yogoevents.pl/wp-content/uploads/2026/09/wyniki_Kregi-Mocy_21km_20260905_141348.pdf"
+             class="btn btn-green" target="_blank" rel="noopener">
+            Wyniki · PDF
           </a>
         </div>
       </div>
@@ -980,272 +1282,9 @@ footer p + p { margin-top: 6px; }
 
 
 <!-- ══════════════════════════════════════════════
-     SZCZEGÓŁY OBU BIEGÓW
-══════════════════════════════════════════════ -->
-<section class="bg-dark" id="szczegoly" style="padding-top:0">
-  <div class="wrap">
-
-    <div style="text-align:center;margin-bottom:48px;">
-      <span class="label">Szczegóły</span>
-      <h2>Informacje startowe</h2>
-    </div>
-
-    <div class="tabele-grid">
-
-      <!-- SZMARAGD BORÓW -->
-      <div class="tabela-blok">
-        <div class="tabela-blok-header">
-          <div class="tabela-blok-num">1</div>
-          <h3>Szmaragd Borów – 10 km</h3>
-        </div>
-        <table class="t">
-          <tr><td>Data</td><td>20 czerwca 2026 (sobota)</td></tr>
-          <tr><td>Start</td><td>11:00 · Centrum Rekreacji nad Jeziorem, Ostrowite</td></tr>
-          <tr><td>Meta</td><td>Ostrowite (trasa zapętlona)</td></tr>
-          <tr><td>Nawierzchnia</td><td>Asfalt 60%, płyty YOMB 15%, grunt 25%</td></tr>
-          <tr><td>Profil</td><td>Płaski – bez znaczących przewyższeń</td></tr>
-          <tr><td>Punkty z wodą</td><td>4 km i 7 km</td></tr>
-          <tr><td>Limit czasowy</td><td>90 minut</td></tr>
-          <tr><td>Biuro Zawodów</td><td>otwarte 9:00–10:45</td></tr>
-          <tr><td>Limit</td><td>300 osób (16+)</td></tr>
-          <tr><td>Biegi dziecięce</td><td>Tak – 6 kategorii (0–15 lat), bezpłatnie</td></tr>
-          <tr><td>Opłata startowa</td><td>80 zł &nbsp;·&nbsp; Pakiet dwóch biegów: 120 zł <span style="color:rgba(255,255,255,.5);font-size:.82rem">(60 zł za bieg)</span></td></tr>
-        </table>
-        <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn btn-gold">
-          Zapisz się na Szmaragd Borów
-        </a>
-      </div>
-
-      <!-- KRĘGI MOCY -->
-      <div class="tabela-blok">
-        <div class="tabela-blok-header">
-          <div class="tabela-blok-num">2</div>
-          <h3>Kręgi Mocy – 21 km</h3>
-        </div>
-        <table class="t">
-          <tr><td>Data</td><td>5 września 2026 (sobota)</td></tr>
-          <tr><td>Start</td><td>13:00 · Rezerwat Kręgi Kamienne, Odry</td></tr>
-          <tr><td>Meta</td><td>Plac Piekarka, Czersk</td></tr>
-          <tr><td>Nawierzchnia</td><td>Asfalt 75%, tłuczeń 10%, kostka 10%, płyty 5%</td></tr>
-          <tr><td>Profil</td><td>Płaski z lokalnymi przewyższeniami</td></tr>
-          <tr><td>Punkty odżywcze</td><td>Ok. 5 km, 10 km, 15 km + meta</td></tr>
-          <tr><td>Limit czasowy</td><td>180 minut (3 godziny)</td></tr>
-          <tr><td>Biuro Zawodów</td><td>otwarte 9:00–12:00, Plac Piekarka</td></tr>
-          <tr><td>Transport na start</td><td>Autobus od 11:00, ostatni 12:15</td></tr>
-          <tr><td>Limit</td><td>300 osób (16+)</td></tr>
-          <tr><td>Opłata startowa</td><td>80 zł &nbsp;·&nbsp; Pakiet dwóch biegów: 120 zł <span style="color:rgba(255,255,255,.5);font-size:.82rem">(60 zł za bieg)</span></td></tr>
-        </table>
-        <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn btn-green">
-          Zapisz się na Kręgi Mocy
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
-     KLASYFIKACJA GENERALNA
-══════════════════════════════════════════════ -->
-<section class="bg-dark" style="padding-top:0">
-  <div class="wrap">
-
-    <div style="
-      background: linear-gradient(135deg, rgba(200,162,39,.12) 0%, rgba(200,162,39,.05) 100%);
-      border: 1px solid rgba(200,162,39,.25);
-      border-radius: 12px;
-      padding: 48px;
-    ">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
-        <div style="
-          width: 48px; height: 48px; border-radius: 50%;
-          background: var(--gold); color: #111;
-          display: flex; align-items: center; justify-content: center;
-          font-size: 1.3rem; font-weight: 900; flex-shrink: 0;
-        ">★</div>
-        <div>
-          <span style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Wyzwanie podwójne</span>
-          <h2 style="color:var(--white);margin:4px 0 0;">Klasyfikacja Generalna</h2>
-        </div>
-      </div>
-
-      <p style="color:rgba(255,255,255,.75);max-width:720px;margin-bottom:28px;font-size:1.02rem;line-height:1.75;">
-        Chcesz sprawdzić się w pełnym wyzwaniu? Zapisz się na oba biegi i stań do rywalizacji
-        o tytuł <strong style="color:var(--white);">Mistrza/Mistrzyni Czersk 100</strong>.
-        Klasyfikacja generalna sumuje Twoje czasy z obu biegów – im niższa suma, tym wyższe miejsce.
-        Nagradzanych jest 5 najlepszych kobiet i 5 najlepszych mężczyzn. Bez podziału na kategorie wiekowe.
-      </p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:36px;">
-
-        <!-- KOBIETY -->
-        <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:28px;border:1px solid rgba(255,255,255,.08);">
-          <h3 style="color:var(--gold);font-size:.88rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;">Kategoria K – Kobiety</h3>
-          <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;width:45%;">I miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);font-weight:700;">1 000 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">II miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">700 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">III miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">500 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">IV miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">200 zł</td>
-            </tr>
-            <tr>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">V miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">100 zł</td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- MĘŻCZYŹNI -->
-        <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:28px;border:1px solid rgba(255,255,255,.08);">
-          <h3 style="color:var(--gold);font-size:.88rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;">Kategoria M – Mężczyźni</h3>
-          <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;width:45%;">I miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);font-weight:700;">1 000 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">II miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">700 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">III miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">500 zł</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">IV miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">200 zł</td>
-            </tr>
-            <tr>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.5);font-weight:600;">V miejsce</td>
-              <td style="padding:8px 10px;color:rgba(255,255,255,.85);">100 zł</td>
-            </tr>
-          </table>
-        </div>
-
-      </div>
-
-      <!-- Nagroda specjalna -->
-      <div style="
-        background: rgba(46,125,50,.25);
-        border: 1px solid rgba(67,160,71,.3);
-        border-radius: 8px;
-        padding: 20px 24px;
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-        margin-bottom: 32px;
-      ">
-        <span style="font-size:1.4rem;flex-shrink:0;margin-top:2px;">🏅</span>
-        <div>
-          <strong style="color:var(--white);display:block;margin-bottom:4px;">Nagroda specjalna – Najlepszy mieszkaniec i mieszkanka gminy Czersk</strong>
-          <span style="color:rgba(255,255,255,.65);font-size:.9rem;">
-            Dla najlepszego mężczyzny i najlepszej kobiety spośród mieszkańców gminy Czersk
-            w klasyfikacji generalnej (udział w obu biegach). Klasyfikacja prowadzona oddzielnie,
-            niezależnie od nagród głównych.
-          </span>
-        </div>
-      </div>
-
-      <div style="
-        border-top: 1px solid rgba(255,255,255,.1);
-        padding-top: 20px;
-        color: rgba(255,255,255,.45);
-        font-size: .82rem;
-        line-height: 1.65;
-      ">
-        <strong style="color:rgba(255,255,255,.55);">Zasady klasyfikacji:</strong>
-        Zsumowaniu podlegają czasy uzyskane w biegu Szmaragd Borów (10 km) i Kręgi Mocy (21 km).
-        Warunkiem uwzględnienia w klasyfikacji jest ukończenie obu biegów. Nagradzanych jest
-        5 najlepszych kobiet i 5 najlepszych mężczyzn. Brak podziału na kategorie wiekowe.
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
-     HARMONOGRAM
-══════════════════════════════════════════════ -->
-<section id="harmonogram">
-  <div class="wrap">
-    <span class="label">Plan dnia</span>
-    <h2 style="margin-bottom:0">Harmonogram wydarzeń</h2>
-
-    <div class="harmonogram-grid">
-
-      <div class="harmonogram-col">
-        <h3>20 czerwca 2026 – Szmaragd Borów</h3>
-        <ul class="timeline">
-          <li class="tl-item">
-            <span class="tl-time">9:00</span>
-            <span class="tl-desc">Otwarcie Biura Zawodów – Centrum Rekreacji w Ostrowitem</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">9:00–10:45</span>
-            <span class="tl-desc">Odbiór numerów startowych i weryfikacja</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">rano</span>
-            <span class="tl-desc">Biegi dzieci i młodzieży – 6 kategorii wiekowych</span>
-          </li>
-          <li class="tl-item highlight">
-            <span class="tl-time">11:00</span>
-            <span class="tl-desc">STRZAŁ STARTOWY – bieg główny 10 km</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">do 12:30</span>
-            <span class="tl-desc">Finiszowanie uczestników, dekoracje</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="harmonogram-col">
-        <h3>5 września 2026 – Kręgi Mocy</h3>
-        <ul class="timeline">
-          <li class="tl-item">
-            <span class="tl-time">9:00</span>
-            <span class="tl-desc">Otwarcie Biura Zawodów – Plac Piekarka, Czersk</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">9:00–12:00</span>
-            <span class="tl-desc">Odbiór numerów startowych i weryfikacja</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">11:00–12:15</span>
-            <span class="tl-desc">Transport autobusem na start (Odry – Kręgi Kamienne)</span>
-          </li>
-          <li class="tl-item highlight">
-            <span class="tl-time">13:00</span>
-            <span class="tl-desc">STRZAŁ STARTOWY – półmaraton 21 km</span>
-          </li>
-          <li class="tl-item">
-            <span class="tl-time">do 16:00</span>
-            <span class="tl-desc">Finiszowanie, dekoracje, ceremonia wręczenia nagród</span>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
      TRASY
 ══════════════════════════════════════════════ -->
-<section class="bg-dark">
+<section class="bg-dark" id="trasy">
   <div class="wrap">
     <h2 style="margin-bottom:0">Trasy biegów</h2>
 
@@ -1320,23 +1359,90 @@ footer p + p { margin-top: 6px; }
 </section>
 
 
+<!-- ══════════════════════════════════════════════
+     ŚWIĘTUJ Z NAMI
+══════════════════════════════════════════════ -->
+<section class="fb-section" id="swietuj" style="padding: 88px 24px;">
+  <div class="wrap" style="text-align:center;">
+    <span style="display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Dołącz do celebracji</span>
+    <h2 style="color:var(--white);margin-bottom:16px;">Świętuj 100-lecie Czerska<br>razem z nami!</h2>
+    <p style="color:rgba(255,255,255,.65);max-width:580px;margin:0 auto 36px;">
+      Obchody jubileuszu trwają przez cały rok 2026.
+      Śledź stronę Gminy Czersk na Facebooku, aby nie przegapić kolejnych wydarzeń,
+      zdjęć z biegów i wspomnień z jubileuszowego roku.
+    </p>
+    <div class="btn-group center">
+      <a href="https://www.facebook.com/gmina.czersk" class="btn btn-fb" target="_blank" rel="noopener">
+        Gmina Czersk na Facebooku
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     100-LECIE – INNE WYDARZENIA
+══════════════════════════════════════════════ -->
+<section class="bg-gray tight">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="label">Rok jubileuszowy</span>
+      <h2>100-lecie Czerska – więcej wydarzeń</h2>
+      <p style="color:var(--gray-600);max-width:540px;margin:12px auto 0;">
+        Biegi to tylko jeden z wielu akcentów jubileuszowego roku.
+        Czersk świętuje swoje stulecie przez cały 2026 rok.
+      </p>
+    </div>
+
+    <div class="jubilee-grid">
+
+      <div class="jubilee-card">
+        <div class="jubilee-card-icon">🎭</div>
+        <h3>Koncerty i spektakle</h3>
+        <p>Jubileuszowe wydarzania kulturalne organizowane przez Gminne Centrum Kultury w Czersku przez cały rok 2026.</p>
+      </div>
+
+      <div class="jubilee-card">
+        <div class="jubilee-card-icon">🏛️</div>
+        <h3>Wystawy historyczne</h3>
+        <p>Ekspozycje poświęcone 100-letniej historii Czerska – od nadania praw miejskich po dzień dzisiejszy.</p>
+      </div>
+
+      <div class="jubilee-card">
+        <div class="jubilee-card-icon">🎉</div>
+        <h3>Święto Miasta</h3>
+        <p>Uroczyste obchody jubileuszu z udziałem mieszkańców, gości i władz gminy. Sprawdź aktualny program na stronie gminy.</p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://www.facebook.com/gmina.czersk" class="btn btn-green" target="_blank" rel="noopener">
+        Aktualny program jubileuszu
+      </a>
+    </div>
+  </div>
+</section>
 
 
 <!-- ══════════════════════════════════════════════
      FINALNY CTA
 ══════════════════════════════════════════════ -->
 <section class="bg-green cta-section">
-  <h2>Wybierz swój dystans i dołącz do jubileuszu!</h2>
+  <img class="cta-logo"
+       src="https://yogoevents.pl/wp-content/uploads/2026/03/logo-biegi_biale.png"
+       alt="RUN CZERSK 1926–2026">
+  <h2>Dziękujemy wszystkim biegaczom!</h2>
   <p>
-    Miejsca są limitowane – 300 na każdy bieg.
-    Zapisz się już teraz i bądź częścią historii Czerska.
+    Każdy finisher to część historii Czerska.
+    Do zobaczenia na trasach w kolejnych edycjach.
   </p>
   <div class="btn-group center">
-    <a href="https://dostartu.pl/szmaragd-borow-v16008" class="btn btn-white">
-      Szmaragd Borów – 10 km
+    <a href="#wyniki" class="btn btn-white">
+      Klasyfikacja Generalna
     </a>
-    <a href="https://dostartu.pl/kregi-mocy-v16009" class="btn btn-ghost">
-      Kręgi Mocy – 21 km
+    <a href="https://www.facebook.com/gmina.czersk" class="btn btn-ghost" target="_blank" rel="noopener">
+      Facebook Gminy Czersk
     </a>
   </div>
 </section>
