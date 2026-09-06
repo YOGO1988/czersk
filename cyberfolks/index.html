@@ -831,6 +831,93 @@ footer p + p { margin-top: 6px; }
 #lb-close:hover { color: var(--white); }
 
 /* ─────────────────────────────────────────────
+   GP MEDAL BADGES
+───────────────────────────────────────────── */
+.gp-medal {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: .85rem;
+}
+.gp-gold   { background: var(--gold);    color: #1a1200; }
+.gp-silver { background: #b8b8b8;        color: #222; }
+.gp-bronze { background: #c87941;        color: #fff; }
+
+/* ─────────────────────────────────────────────
+   KATEGORIE WIEKOWE
+───────────────────────────────────────────── */
+.age-section {
+  max-width: 1120px;
+  margin: 48px auto 0;
+}
+
+.age-section-title {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.age-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.age-col {}
+
+.age-col h3 {
+  color: var(--white);
+  font-size: .88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 10px 16px;
+  background: rgba(255,255,255,.06);
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.age-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  align-items: center;
+  background: rgba(255,255,255,.02);
+}
+.age-row:last-child { border-bottom: none; border-radius: 0 0 6px 6px; }
+
+.age-cat {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.age-winner { font-size: .88rem; color: var(--white); font-weight: 600; }
+.age-city   { font-size: .76rem; color: rgba(255,255,255,.45); margin-top: 1px; }
+
+.age-time {
+  font-size: .88rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.age-none {
+  font-size: .82rem;
+  color: rgba(255,255,255,.3);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────────── */
 @media (max-width: 960px) {
@@ -846,6 +933,7 @@ footer p + p { margin-top: 6px; }
   .biegi-grid         { grid-template-columns: 1fr; max-width: 560px; }
 
   .gp-tables          { grid-template-columns: 1fr; }
+  .age-tables         { grid-template-columns: 1fr; }
 
   .gp-special         { grid-template-columns: 1fr; }
   .gp-special-icon    { text-align: center; }
@@ -889,7 +977,6 @@ footer p + p { margin-top: 6px; }
     </a>
     <ul class="nav-links">
       <li><a href="#wyniki">Klasyfikacja</a></li>
-      <li><a href="#biegi">Biegi</a></li>
       <li><a href="#trasy">Trasy</a></li>
       <li><a href="#swietuj">Świętuj</a></li>
     </ul>
@@ -941,7 +1028,7 @@ footer p + p { margin-top: 6px; }
       <span class="stat-label">Finisherów · Szmaragd Borów</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">87</span>
+      <span class="stat-num">91</span>
       <span class="stat-label">Finisherów · Kręgi Mocy</span>
     </div>
     <div class="stat-item">
@@ -1006,7 +1093,6 @@ footer p + p { margin-top: 6px; }
     <!-- MĘŻCZYŹNI -->
     <div class="gp-col">
       <div class="gp-col-head">
-        <div class="gp-col-icon">🏃</div>
         <div>
           <div class="gp-col-label">Kategoria</div>
           <h3>Mężczyźni</h3>
@@ -1014,7 +1100,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top1">
-        <div class="gp-place">🥇</div>
+        <div class="gp-place"><span class="gp-medal gp-gold">1</span></div>
         <div class="gp-info">
           <div class="gp-name">Krystian Kurowski</div>
           <div class="gp-city">Kazimierz Biskupi</div>
@@ -1026,7 +1112,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top2">
-        <div class="gp-place">🥈</div>
+        <div class="gp-place"><span class="gp-medal gp-silver">2</span></div>
         <div class="gp-info">
           <div class="gp-name">Mateusz Dajnowski</div>
           <div class="gp-city">Angowice</div>
@@ -1038,7 +1124,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top3">
-        <div class="gp-place">🥉</div>
+        <div class="gp-place"><span class="gp-medal gp-bronze">3</span></div>
         <div class="gp-info">
           <div class="gp-name">Radosław Januszewski</div>
           <div class="gp-city">Bydgoszcz</div>
@@ -1077,7 +1163,6 @@ footer p + p { margin-top: 6px; }
     <!-- KOBIETY -->
     <div class="gp-col">
       <div class="gp-col-head">
-        <div class="gp-col-icon">🏃‍♀️</div>
         <div>
           <div class="gp-col-label">Kategoria</div>
           <h3>Kobiety</h3>
@@ -1085,7 +1170,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top1">
-        <div class="gp-place">🥇</div>
+        <div class="gp-place"><span class="gp-medal gp-gold">1</span></div>
         <div class="gp-info">
           <div class="gp-name">Paulina Głąb</div>
           <div class="gp-city">Rytel <span class="czersk-badge">gmina Czersk</span></div>
@@ -1097,7 +1182,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top2">
-        <div class="gp-place">🥈</div>
+        <div class="gp-place"><span class="gp-medal gp-silver">2</span></div>
         <div class="gp-info">
           <div class="gp-name">Ewelina Lahn</div>
           <div class="gp-city">Charzykowy</div>
@@ -1109,7 +1194,7 @@ footer p + p { margin-top: 6px; }
       </div>
 
       <div class="gp-row top3">
-        <div class="gp-place">🥉</div>
+        <div class="gp-place"><span class="gp-medal gp-bronze">3</span></div>
         <div class="gp-info">
           <div class="gp-name">Marta Kamińska</div>
           <div class="gp-city">Dąbrowa</div>
@@ -1147,9 +1232,87 @@ footer p + p { margin-top: 6px; }
 
   </div>
 
+  <!-- KATEGORIE WIEKOWE -->
+  <div class="age-section">
+    <span class="age-section-title">Zwycięzcy kategorii wiekowych · Grand Prix</span>
+    <div class="age-tables">
+
+      <!-- MĘŻCZYŹNI KATEGORIE -->
+      <div class="age-col">
+        <h3>Mężczyźni</h3>
+        <div class="age-row">
+          <span class="age-cat">M 16–29</span>
+          <div><div class="age-winner">Łukasz Gierszewski</div><div class="age-city">Żalno</div></div>
+          <span class="age-time">2:05:44</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">M 30–39</span>
+          <div><div class="age-winner">Krystian Kurowski</div><div class="age-city">Kazimierz Biskupi</div></div>
+          <span class="age-time">1:48:44</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">M 40–49</span>
+          <div><div class="age-winner">Arkadiusz Orlikowski</div><div class="age-city">Przechlewo</div></div>
+          <span class="age-time">2:03:39</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">M 50–59</span>
+          <div><div class="age-winner">Dariusz Pieczyński</div><div class="age-city">Płazowo</div></div>
+          <span class="age-time">2:40:39</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">M 60–69</span>
+          <div><div class="age-winner">Jan Muszyński</div><div class="age-city">Chojnice</div></div>
+          <span class="age-time">2:44:52</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">M 70+</span>
+          <div><div class="age-winner">Zbigniew Tocha</div><div class="age-city">Skórcz</div></div>
+          <span class="age-time">2:56:32</span>
+        </div>
+      </div>
+
+      <!-- KOBIETY KATEGORIE -->
+      <div class="age-col">
+        <h3>Kobiety</h3>
+        <div class="age-row">
+          <span class="age-cat">K 16–29</span>
+          <div><div class="age-winner">Justyna Brzezińska</div><div class="age-city">Czersk <span class="czersk-badge">gmina Czersk</span></div></div>
+          <span class="age-time">2:37:36</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">K 30–39</span>
+          <div><div class="age-winner">Ewelina Lahn</div><div class="age-city">Charzykowy</div></div>
+          <span class="age-time">2:25:11</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">K 40–49</span>
+          <div><div class="age-winner">Paulina Głąb</div><div class="age-city">Rytel <span class="czersk-badge">gmina Czersk</span></div></div>
+          <span class="age-time">2:20:33</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">K 50–59</span>
+          <div><div class="age-winner">Maria Zabrocka</div><div class="age-city">Czersk <span class="czersk-badge">gmina Czersk</span></div></div>
+          <span class="age-time">3:10:08</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">K 60–69</span>
+          <div><div class="age-winner">Mirosława Augustyńska</div><div class="age-city">Charzykowy</div></div>
+          <span class="age-time">2:51:39</span>
+        </div>
+        <div class="age-row">
+          <span class="age-cat">K 70+</span>
+          <div><div class="age-none">brak uczestniczek</div></div>
+          <span class="age-time"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- NAGRODA SPECJALNA -->
-  <div class="gp-special">
-    <div class="gp-special-icon">🏅</div>
+  <div class="gp-special" style="margin-top:28px;">
+    <div style="width:40px;height:40px;border-radius:50%;background:var(--green-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem;font-weight:900;color:#fff;">★</div>
     <div>
       <h3>Nagroda specjalna – Najlepsi mieszkańcy gminy Czersk</h3>
       <ul class="gp-special-list">
@@ -1176,8 +1339,7 @@ footer p + p { margin-top: 6px; }
   <div class="wrap">
 
     <div style="text-align:center;margin-bottom:40px;">
-      <span class="label">Wyniki</span>
-      <h2>Oficjalne listy wyników</h2>
+      <h2>Wyniki</h2>
     </div>
 
     <div class="wyniki-grid">
@@ -1188,7 +1350,7 @@ footer p + p { margin-top: 6px; }
         <p>Pełne wyniki biegu z 20 czerwca 2026. Wszystkie kategorie wiekowe i open.</p>
         <a href="https://yogoevents.pl/wp-content/uploads/2026/06/wyniki_Szmaragd_Borow_10km.pdf"
            class="btn btn-gold" target="_blank" rel="noopener">
-          Pobierz wyniki PDF
+          Wyniki
         </a>
       </div>
 
@@ -1198,16 +1360,16 @@ footer p + p { margin-top: 6px; }
         <p>Pełne wyniki półmaratonu z 5 września 2026. Wszystkie kategorie wiekowe i open.</p>
         <a href="https://yogoevents.pl/wp-content/uploads/2026/09/wyniki_Kregi-Mocy_21km_20260905_141348.pdf"
            class="btn btn-green" target="_blank" rel="noopener">
-          Pobierz wyniki PDF
+          Wyniki
         </a>
       </div>
 
       <div class="wynik-card">
-        <div class="wynik-card-icon">🏆</div>
-        <h3>Klasyfikacja Open · Grand Prix</h3>
-        <p>Pełna klasyfikacja open obejmująca wszystkich uczestników obu biegów.</p>
-        <a href="https://yogoevents.pl" class="btn btn-ghost" target="_blank" rel="noopener">
-          Pełna klasyfikacja
+        <div class="wynik-card-icon" style="font-size:1.4rem;font-weight:900;color:var(--gold);">GP</div>
+        <h3>Grand Prix · Klasyfikacja generalna</h3>
+        <p>Pełna klasyfikacja open – suma czasów obu biegów dla uczestników, którzy ukończyli oba starty.</p>
+        <a href="#wyniki" class="btn btn-ghost">
+          Wyniki Grand Prix
         </a>
       </div>
 
@@ -1216,69 +1378,6 @@ footer p + p { margin-top: 6px; }
 </section>
 
 
-<!-- ══════════════════════════════════════════════
-     DWA BIEGI – PODSUMOWANIE
-══════════════════════════════════════════════ -->
-<section class="bg-dark" id="biegi">
-  <div class="wrap">
-    <div class="biegi-header">
-      <span class="label">Wspomnienia</span>
-      <h2>Dwa biegi – dwa oblicza Czerska</h2>
-      <p style="color:rgba(255,255,255,.65);">
-        Każde z wydarzeń miało własną trasę, atmosferę i niepowtarzalny charakter.
-        Razem złożyły się na jeden jubileusz.
-      </p>
-    </div>
-
-    <div class="biegi-grid">
-
-      <!-- SZMARAGD BORÓW -->
-      <div class="bieg-card">
-        <div class="bieg-card-img">
-          <img src="https://yogoevents.pl/wp-content/uploads/2026/03/15.png"
-               alt="Szmaragd Borów – bieg 10 km">
-        </div>
-        <div class="bieg-card-body">
-          <span class="bieg-tag bieg-tag-a">Bieg nr 1 · 20 czerwca 2026</span>
-          <h3>Szmaragd Borów</h3>
-          <p class="bieg-meta">10 km &nbsp;·&nbsp; Centrum Rekreacji w Ostrowitem</p>
-          <p>
-            Letni bieg przez serce Borów Tucholskich.
-            Start i meta nad jeziorem w Ostrowitem. Trasa płaska –
-            przez Konewki, Dąbki i Ustronie z powrotem do mety.
-          </p>
-          <a href="https://yogoevents.pl/wp-content/uploads/2026/06/wyniki_Szmaragd_Borow_10km.pdf"
-             class="btn btn-gold" target="_blank" rel="noopener">
-            Wyniki · PDF
-          </a>
-        </div>
-      </div>
-
-      <!-- KRĘGI MOCY -->
-      <div class="bieg-card">
-        <div class="bieg-card-img">
-          <img src="https://yogoevents.pl/wp-content/uploads/2026/03/16.png"
-               alt="Kręgi Mocy – półmaraton 21 km">
-        </div>
-        <div class="bieg-card-body">
-          <span class="bieg-tag bieg-tag-b">Bieg nr 2 · 5 września 2026</span>
-          <h3>Kręgi Mocy</h3>
-          <p class="bieg-meta">21 km &nbsp;·&nbsp; Odry → Plac Piekarka, Czersk</p>
-          <p>
-            Jubileuszowy półmaraton z prehistorycznych Kręgów Kamiennych w Odrach
-            przez Gotelp, Łubną i Malachin prosto do serca Czerska.
-            Meta na Placu Piekarka w centrum jubileuszowego miasta.
-          </p>
-          <a href="https://yogoevents.pl/wp-content/uploads/2026/09/wyniki_Kregi-Mocy_21km_20260905_141348.pdf"
-             class="btn btn-green" target="_blank" rel="noopener">
-            Wyniki · PDF
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 <!-- ══════════════════════════════════════════════
@@ -1365,15 +1464,18 @@ footer p + p { margin-top: 6px; }
 <section class="fb-section" id="swietuj" style="padding: 88px 24px;">
   <div class="wrap" style="text-align:center;">
     <span style="display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Dołącz do celebracji</span>
-    <h2 style="color:var(--white);margin-bottom:16px;">Świętuj 100-lecie Czerska<br>razem z nami!</h2>
+    <h2 style="color:var(--white);margin-bottom:16px;">Świętuj z nami!</h2>
     <p style="color:rgba(255,255,255,.65);max-width:580px;margin:0 auto 36px;">
-      Obchody jubileuszu trwają przez cały rok 2026.
-      Śledź stronę Gminy Czersk na Facebooku, aby nie przegapić kolejnych wydarzeń,
-      zdjęć z biegów i wspomnień z jubileuszowego roku.
+      Obchody jubileuszu 100-lecia Czerska trwają przez cały rok 2026.
+      Sprawdź pełny harmonogram wydarzeń, dołącz do społeczności i bądź częścią
+      świętowania na stronie gminy oraz Facebooku.
     </p>
     <div class="btn-group center">
+      <a href="https://www.czersk.pl/" class="btn btn-white" target="_blank" rel="noopener">
+        czersk.pl
+      </a>
       <a href="https://www.facebook.com/gmina.czersk" class="btn btn-fb" target="_blank" rel="noopener">
-        Gmina Czersk na Facebooku
+        Facebook Gminy Czersk
       </a>
     </div>
   </div>
@@ -1381,45 +1483,30 @@ footer p + p { margin-top: 6px; }
 
 
 <!-- ══════════════════════════════════════════════
-     100-LECIE – INNE WYDARZENIA
+     100-LECIE – HARMONOGRAM
 ══════════════════════════════════════════════ -->
 <section class="bg-gray tight">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:48px;">
+    <div style="text-align:center;margin-bottom:40px;">
       <span class="label">Rok jubileuszowy</span>
       <h2>100-lecie Czerska – więcej wydarzeń</h2>
-      <p style="color:var(--gray-600);max-width:540px;margin:12px auto 0;">
-        Biegi to tylko jeden z wielu akcentów jubileuszowego roku.
-        Czersk świętuje swoje stulecie przez cały 2026 rok.
+      <p style="color:var(--gray-600);max-width:600px;margin:12px auto 0;">
+        Biegi to jeden z wielu punktów bogatego programu obchodów stulecia Czerska.
+        Na stronie gminy znajdziesz pełny harmonogram wydarzeń kulturalnych, sportowych
+        i historycznych zaplanowanych na rok jubileuszowy 2026.
       </p>
     </div>
 
-    <div class="jubilee-grid">
-
-      <div class="jubilee-card">
-        <div class="jubilee-card-icon">🎭</div>
-        <h3>Koncerty i spektakle</h3>
-        <p>Jubileuszowe wydarzania kulturalne organizowane przez Gminne Centrum Kultury w Czersku przez cały rok 2026.</p>
+    <div style="text-align:center;">
+      <div class="btn-group center">
+        <a href="https://www.czersk.pl/aktualnosc/aktualnosci/5967-harmonogram-wydarzen-z-okazji-100-lecia-czerska"
+           class="btn btn-green" target="_blank" rel="noopener">
+          Harmonogram 100-lecia Czerska
+        </a>
+        <a href="https://www.czersk.pl/" class="btn btn-outline-green" target="_blank" rel="noopener">
+          Strona Gminy Czersk
+        </a>
       </div>
-
-      <div class="jubilee-card">
-        <div class="jubilee-card-icon">🏛️</div>
-        <h3>Wystawy historyczne</h3>
-        <p>Ekspozycje poświęcone 100-letniej historii Czerska – od nadania praw miejskich po dzień dzisiejszy.</p>
-      </div>
-
-      <div class="jubilee-card">
-        <div class="jubilee-card-icon">🎉</div>
-        <h3>Święto Miasta</h3>
-        <p>Uroczyste obchody jubileuszu z udziałem mieszkańców, gości i władz gminy. Sprawdź aktualny program na stronie gminy.</p>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:40px;">
-      <a href="https://www.facebook.com/gmina.czersk" class="btn btn-green" target="_blank" rel="noopener">
-        Aktualny program jubileuszu
-      </a>
     </div>
   </div>
 </section>
